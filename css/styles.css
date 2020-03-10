@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(243,243,243);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.code-snippets {
+    background-color: rgb(233,233,233);
+    font-family: monospace;
+    width: 70%;
+    padding: 1em;
+    line-height: 1.5;
+}
+
+span {
+    font-weight: 900;
+    background-color: rgb(196, 196, 196);
+    padding: 2px;
+}
+
+.main-section li {
+    list-style-type: square ;
+    margin-left: 3em;
+    font-size: 14px;
+}
+
+header {
+    font-size: 1.6em;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+}
+
+#navbar {
+    background: rgb(230, 228, 228);
+    border-radius: 0 10px 10px 0 ;
+    display: block;
+    /* float: left; */
+    position: fixed;
+    min-width: 290px;
+    width: 310px;
+    height: 100%;
+    padding: 1.5em 1.5em 3.5em 1.5em;
+    list-style: none;
+    overflow: auto;
+}
+
+
+
+#navbar li {
+    border-bottom: 1px dotted gray;
+    line-height: 2.5;
+    list-style: none;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+#main-doc {
+    display: block;
+    position: relative;
+    padding-top: 1.5em;
+    margin-left: 330px;
+}
+
+#main-doc li {
+    line-height: 1.5;
+    margin-bottom: 0.3em;
+}

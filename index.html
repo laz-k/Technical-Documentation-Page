@@ -10,29 +10,252 @@
 
 <body>
     <div class="page-wrapper">
-    <header id="header">
-        <h1>PHP Tutorial</h1>
-    </header>
-    <aside>
-        <nav>
-            <li>Intro</li>
-            <li>Install</li>
-            <li>Syntax</li>
-            <li>Comments</li>
-            <li>Variables</li>
-            <li>Echo / Print</li>
-            <li>Data Types</li>
-            <li>Switch</li>
-            <li>Loops</li>
-            <li>Functions</li>
-            <li>Arrays</li>
-            <li>Superglobals</li>
-        </nav>
-    </aside>
-    <main id="main-doc">
-        <section class="main-section">
-            <header></header>
-        </section>
+
+        <aside>
+            <nav id="navbar">
+                <header id="header">PHP Documentation</header>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#common_uses_of_php" class="nav-link">Common uses of PHP</a></li>
+                <li><a href="#characteristics_of_php" class="nav-link">Characteristics of PHP</a></li>
+                <li><a href="#installation" class="nav-link">Installation</a></li>
+                <li><a href="#syntax" class="nav-link">Syntax</a></li>
+                <li><a href="#comments" class="nav-link">Comments</a></li>
+                <li><a href="#variables" class="nav-link">Variables</a></li>
+                <li><a href="#echo_/_print" class="nav-link">Echo / Print</a></li>
+                <li><a href="#data_types" class="nav-link">Data Types</a></li>
+            </nav>
+        </aside>
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header>Introduction</header>
+                <article>
+                    <p>
+                        PHP started out as a small open source project that evolved as more and more people found
+                        out
+                        how useful it was.Rasmus Lerdorf unleashed the first version of PHP way back in
+                        1994.<br><br>
+                    </p>
+                    <ul>
+                        <li>PHP is a recursive acronym for "PHP: Hypertext Preprocessor".</li>
+                        <li>PHP is a server side scripting language that is embedded in HTML. It is used to manage
+                            dynamic content, databases, session tracking, even build entire e-commerce sites.</li>
+                        <li>It is integrated with a number of popular databases, including MySQL, PostgreSQL,
+                            Oracle,
+                            Sybase, Informix, and Microsoft SQL Server.</li>
+                        <li>PHP is pleasingly zippy in its execution, especially when compiled as an Apache module
+                            on
+                            the Unix side. The MySQL server, once started, executes even very complex queries with
+                            huge
+                            result sets in record-setting time.</li>
+                        <li>PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added
+                            support for Java and distributed object architectures (COM and CORBA), making n-tier
+                            development a possibility for the first time.</li>
+                        <li>PHP is forgiving: PHP language tries to be as forgiving as possible.</li>
+                        <li>PHP Syntax is C-Like.</li>
+                    </ul><br>
+                </article>
+            </section>
+
+            <section class="main-section" id="common_uses_of_php">
+                <header>Common uses of PHP</header>
+                <article>
+                    <p>Five important characteristics make PHP's practical nature possible</p><br>
+                    <ul>
+                        <li>PHP performs system functions, i.e. from files on a system it can create, open, read, write,
+                            and close them.</li>
+                        <li>PHP can handle forms, i.e. gather data from files, save data to a file, through email you
+                            can send data, return data to the user.</li>
+                        <li>You add, delete, modify elements within your database through PHP.</li>
+                        <li>Access cookies variables and set cookies.</li>
+                        <li>Using PHP, you can restrict users to access some pages of your website.</li>
+                        <li>It can encrypt data.</li>
+                    </ul><br>
+
+                </article>
+            </section>
+
+            <section class="main-section" id="characteristics_of_php">
+                <header>Characteristics of PHP</header>
+                <article>
+                    <p>Five important characteristics make PHP's practical nature possible:</p><br>
+                    <ul>
+                        <li>Simplicity</li>
+                        <li>Efficiency</li>
+                        <li>Security</li>
+                        <li>Flexibility</li>
+                        <li>Familiarity</li>
+                    </ul><br>
+                </article>
+            </section>
+
+            <section class="main-section" id="installation">
+                <header>Installation</header>
+                <article>
+                    <p>To start using PHP, you can:</p>
+                    <ul>
+                        <li>Find a web host with PHP and MySQL support.</li>
+                        <li>Install a web server on your own computer, and then install PHP and MySQL.</li>
+                    </ul>
+                    <h3>Use a Web Host With PHP Support</h3>
+                    <p>If your server has activated support for PHP you do not need to do anything.
+                        Just create some <span>.php</span> files, place them in your web directory, and the server will
+                        automatically
+                        parse them for you. You do not need to compile anything or install any extra tools.
+                        Because PHP is free, most web hosts offer PHP support.</p>
+
+                    <h3>Set Up PHP on Your Own PC</h3>
+                    <p>However, if your server does not support PHP, you must:</p>
+                    <ul>
+                        <li>Install a web server.</li>
+                        <li>Install PHP.</li>
+                        <li>Install a database, such as MySQL.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="main-section" id="syntax">
+                <header>Syntax</header>
+                <article>
+
+                    <ul>
+                        <li>A PHP script is executed on the server, and the plain HTML result is sent back to the
+                            browser.</li>
+                        <li>A PHP script can be placed anywhere in the document.</li>
+                        <li>A PHP script starts with &lt;?php and ends with ?&gt;:</li>
+                    </ul>
+                    <figure class="code-snippets">
+                        &lt;?php<br>
+                        // PHP code goes here<br>
+                        ?&gt;
+                    </figure>
+                    <p>The default file extension for PHP files is ".php".
+                        A PHP file normally contains HTML tags, and some PHP scripting code.
+                        Below, we have an example of a simple PHP file, with a PHP script that uses a built-in PHP
+                        function "echo" to output the text "Hello World!" on a web page:</p>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;html&gt;<br>
+                            &nbsp;&nbsp;&lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Hello World&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&lt;/head&gt;<br>
+                            &nbsp;&nbsp;&lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;?php echo "Hello, World!";?&gt;<br>
+                            &nbsp;&nbsp;&lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </figure>
+                </article>
+            </section>
+
+            <section class="main-section" id="comments">
+                <header>Comments</header>
+                <article>
+                    <p>A comment in PHP code is a line that is not executed as a part of the program. Its only purpose
+                        is to be read by someone who is looking at the code.<br>Comments can be used to:</p>
+                    <ul>
+                        <li>Let others understand your code.</li>
+                        <li>Remind yourself of what you did - Most programmers have experienced coming back to their own
+                            work a year or two later and having to re-figure out what they did. Comments can remind you
+                            of what you were thinking when you wrote the code.</li>
+                    </ul><br>
+                    <h3>PHP supports several ways of commenting:</h3><br>
+                    <h4>Syntax for single-line comments:</h4>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;html&gt;<br>
+                            &nbsp;&nbsp;&lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;?php<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;// This is a single-line comment<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;# This is also a single-line comment<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;?&gt;<br>
+                            &nbsp;&nbsp;&lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </figure><br>
+
+                    <h4>Syntax for multiple-line comments:</h4>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;html&gt;<br>
+                            &nbsp;&nbsp;&lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;?php<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;/*
+                            &nbsp;&nbsp;&nbsp;&nbsp;This is a multiple-lines comment block<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;that spans over multiple<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;lines
+                            &nbsp;&nbsp;&nbsp;&nbsp;*/<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;?&gt;<br>
+                            &nbsp;&nbsp;&lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </figure><br>
+
+                    <h4>Using comments to leave out parts of the code:</h4>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;html&gt;<br>
+                            &nbsp;&nbsp;&lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;?php<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;// You can also use comments to leave out parts of a code line
+                            &nbsp;&nbsp;&nbsp;&nbsp;$x = 5 /* + 15 */ + 5;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;echo $x;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;?&gt;<br>
+                            &nbsp;&nbsp;&lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </code>
+                    </figure>
+
+                </article>
+            </section>
+
+            <section class="main-section" id="variables">
+                <header>Variables</header>
+                <article>
+                    <p>Variables are "containers" for storing information.<br>
+                        In PHP, a variable starts with the $ sign, followed by the name of the variable:</p>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;?php<br>
+                            $txt = "Hello world!";<br>
+                            $x = 5;<br>
+                            $y = 10.5;<br>
+                            ?&gt;
+                        </code>
+                    </figure>
+                    <p>After the execution of the statements above, the variable $txt will hold the value Hello world!,
+                        the variable $x will hold the value 5, and the variable $y will hold the value 10.5.<br><br>
+                        <span>Note:</span> When you assign a text value to a variable, put quotes around the value.<br><br>
+                        <span>Note:</span> Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.<br>
+                        <h4><span>Think of variables as containers for storing data.</span></h4>
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="echo_/_print">
+                <header>Echo / Print</header>
+                <article>
+                    <p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="data_types">
+                <header>Data Types</header>
+                <article>
+                    <p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </p>
+                </article>
+            </section>
 
 
 
@@ -41,8 +264,8 @@
 
 
 
-    </main>
-</div>
+        </main>
+    </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
