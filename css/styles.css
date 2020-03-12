@@ -89,7 +89,6 @@ header {
     #navbar {
         display: flex;
         flex-direction: column;
-        /* height: 500px; */
         position: relative;
         align-items: center;
         margin: auto;
