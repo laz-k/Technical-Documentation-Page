@@ -11,7 +11,7 @@ body {
 
 body p {
     font-size: 14px;
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 .code-snippets {
@@ -24,7 +24,7 @@ body p {
 
 span {
     font-weight: 900;
-    background-color: rgb(196, 196, 196);
+    color: red;
     padding: 2px;
 }
 
@@ -42,7 +42,6 @@ header {
 
 #navbar {
     background: rgb(230, 228, 228);
-    border-radius: 0 10px 10px 0 ;
     display: block;
     /* float: left; */
     position: fixed;
@@ -79,4 +78,28 @@ header {
 #main-doc li {
     line-height: 1.5;
     margin-bottom: 0.3em;
+}
+
+@media only screen and (max-width: 768px) {
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        /* height: 500px; */
+        position: relative;
+        align-items: center;
+        margin: auto;
+    }
+
+    #main-doc {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 10px;
+        
+    }
 }

@@ -22,7 +22,6 @@
                 <li><a href="#comments" class="nav-link">Comments</a></li>
                 <li><a href="#variables" class="nav-link">Variables</a></li>
                 <li><a href="#echo_/_print" class="nav-link">Echo / Print</a></li>
-                <li><a href="#data_types" class="nav-link">Data Types</a></li>
             </nav>
         </aside>
         <main id="main-doc">
@@ -31,8 +30,7 @@
                 <article>
                     <p>
                         PHP started out as a small open source project that evolved as more and more people found
-                        out
-                        how useful it was.Rasmus Lerdorf unleashed the first version of PHP way back in
+                        out how useful it was. Rasmus Lerdorf unleashed the first version of PHP way back in
                         1994.<br><br>
                     </p>
                     <ul>
@@ -224,46 +222,95 @@
                     </figure>
                     <p>After the execution of the statements above, the variable $txt will hold the value Hello world!,
                         the variable $x will hold the value 5, and the variable $y will hold the value 10.5.<br><br>
-                        <span>Note:</span> When you assign a text value to a variable, put quotes around the value.<br><br>
-                        <span>Note:</span> Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.<br>
-                        <h4><span>Think of variables as containers for storing data.</span></h4>
-                    </p>
+                        <span>Note:</span> When you assign a text value to a variable, put quotes around the
+                        value.<br><br>
+                        <span>Note:</span> Unlike other programming languages, PHP has no command for declaring a
+                        variable. It is created the moment you first assign a value to it.</p>
+                    <h4><span>Think of variables as containers for storing data.</span></h4><br>
+                    <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname,
+                        total_volume).</p>
+                    <h4>Rules for PHP variables:</h4>
+                    <ul>
+                        <li>A variable starts with the $ sign, followed by the name of the variable.</li>
+                        <li>A variable name must start with a letter or the underscore character.</li>
+                        <li>A variable name cannot start with a number.</li>
+                        <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _
+                            ).</li>
+                        <li>Variable names are case-sensitive ($age and $AGE are two different variables).</li>
+                    </ul>
                 </article>
             </section>
 
             <section class="main-section" id="echo_/_print">
                 <header>Echo / Print</header>
                 <article>
-                    <p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                    <h3>PHP echo and print Statements
+                    </h3>
+                    <p><span>echo</span> and <span> print</span> are more or less the same. They are both used to output
+                        data to the screen.<br>
+                        The differences are small: <span>echo</span> has no return value while <span>print</span> has a
+                        return value of 1 so it can be used in expressions. <span>echo</span> can take multiple
+                        parameters (although such usage is rare) while <span>print</span> can take one argument.
+                        <span>echo</span> is marginally faster than <span>print</span>.
                     </p>
+                    <h4>The PHP echo Statement</h4>
+                    <p>The echo statement can be used with or without parentheses: echo or echo().<br>
+                        The following example shows how to output text with the echo command (notice that the text can
+                        contain HTML markup):</p>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;?php<br>
+                            echo "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";<br>
+                            echo "Hello world!&lt;br&gt;";<br>
+                            echo "I'm about to learn PHP!&lt;br&gt;";<br>
+                            echo "This ", "string ", "was ", "made ", "with multiple parameters.";<br>
+                            ?&gt;
+                        </code>
+                    </figure>
+                    <p>The following example shows how to output text and variables with the echo statement:</p>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;?php<br>
+                            $txt1 = "Learn PHP";<br>
+                            $txt2 = "W3Schools.com";<br>
+                            $x = 5;<br>
+                            $y = 4;<br>
+                            echo "&lt;h2&gt;" . $txt1 . "&lt;/h2&gt;";<br>
+                            echo "Study PHP at " . $txt2 . "&lt;br&gt;";<br>
+                            echo $x + $y;<br>
+                            ?&gt;
+                        </code>
+                    </figure><br>
+                    <h4>The PHP print Statement</h4>
+                    <p>The print statement can be used with or without parentheses: print or print().<br>
+                        The following example shows how to output text with the print command (notice that the text can
+                        contain HTML markup):</p>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;?php<br>
+                            print "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";<br>
+                            print "Hello world!&lt;br&gt;";<br>
+                            print "I'm about to learn PHP!";<br>
+                            ?&gt;
+                        </code>
+                    </figure>
+                    <p>The following example shows how to output text and variables with the print statement:</p>
+                    <figure class="code-snippets">
+                        <code>
+                            &lt;?php<br>
+                            $txt1 = "Learn PHP";<br>
+                            $txt2 = "W3Schools.com";<br>
+                            $x = 5;<br>
+                            $y = 4;<br>
+                            print "&lt;h2&gt;" . $txt1 . "&lt;/h2&gt;";<br>
+                            print "Study PHP at " . $txt2 . "&lt;br&gt;";<br>
+                            print $x + $y;<br>
+                            ?&gt;
+                        </code>
+                    </figure>
+                    <br>
                 </article>
             </section>
-
-            <section class="main-section" id="data_types">
-                <header>Data Types</header>
-                <article>
-                    <p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </p>
-                </article>
-            </section>
-
-
-
-
-
-
-
-
         </main>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
